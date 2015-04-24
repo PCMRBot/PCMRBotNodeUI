@@ -6,7 +6,6 @@ app.node.win = app.node.gui.Window.get();
 app.node.fs = require('fs');
 app.node.events = require('events');
 app.node.os = require('os');
-app.node.open = require('open');
 app.node.win.isMaximized = false;
 
 app.node.win.on('maximize', function() {
