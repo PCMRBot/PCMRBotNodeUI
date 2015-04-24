@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+html, body {
+	height: 100%;
+    background:    -webkit-linear-gradient(top, #333 0, #333 100%);
+    overflow: hidden;
+}
+
+/*Sticky Footer*/
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -55px; /* the bottom margin is the negative value of the footer's height */
+}
+
+footer, .push {
+    width:         100%;
+    background:    -webkit-linear-gradient(top, #333 0, #333 100%);
+    border-top: 1px solid #666;
+	height: 55px; /* '.push' must be the same height as 'footer' */
+}
+
+/*Title Bar*/
+header{
+    width:         100%;
+    height:         34px;
+    background:    -webkit-linear-gradient(top, #333 0, #333 100%);
+    border-bottom: 1px solid #666;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    }
+
+/*Window Controls*/
+header>ul{
+    float:        right;
+    text-align:   right;
+    line-height:  0;
+    padding-left: 6px;
+    }
+header>ul>li,
+header>ul>li>a{
+    display: inline-block;
+    }
+header>ul{
+    float: right;
+    }
+header>ul>li>a{
+    width:              22px;
+    height:             22px;
+    margin:              6px 6px 6px 0;
+    background-image:   url('../images/buttons.svg');
+    background-repeat:  no-repeat;
+    -webkit-transition: -webkit-transform 200ms;
+    -webkit-app-region: no-drag;
+    }
+header>ul>li>a:hover,
+header>ul>li>a:focus{
+    -webkit-transform:  scale(1.22,1.22);
+    outline:            none;
+    }
+a#windowControlClose{
+    background-position: -44px 0;
+    }
+a#windowControlMaximize{
+    background-position: -22px 0;
+    }
+a#windowControlMinimize{
+    background-position: 0 0;
+    }
+
+/*Footer Links*/
+footer>ul{
+    float:        left;
+    text-align:   left;
+    line-height:  0;
+    padding-left: 8px;
+    }
+footer>ul>li,
+footer>ul>li>a{
+    display: inline-block;
+    }
+footer>ul{
+    float: left;
+    }
+footer>ul>li>a{
+    margin:              6px 6px 6px 0;
+    background-image:   url('../images/footer.png');
+    background-repeat:  no-repeat;
+    -webkit-transition: -webkit-transform 200ms;
+    }
+footer>ul>li>a:hover,
+footer>ul>li>a:focus{
+    -webkit-transform:  scale(1.22,1.22);
+    outline:            none;
+    }
+a#socialLinkWebsite{
+    width:               67px;
+    height:              55px;
+    background-position: -73px 0;
+    }
+a#socialLinkTwitch{
+    width:               32px;
+    height:              55px;
+    background-position: -43px 0;
+    }
+a#socialLinkGithub{
+    width:               42px;
+    height:              55px;
+    background-position: 0 0;
+    }

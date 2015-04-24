@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PCMRBot</title>
+
+	<meta charset='UTF-8' />
+    <link rel='stylesheet' href='./assets/css/reset.css'>
+    <link rel='stylesheet' href='./assets/css/common.css'>
+
+	<!-- Libraries -->
+	<script src="./assets/js/libs/jquery.min.js"></script>
+
+	<!-- Structure -->
+	<script src="./assets/js/app.js"></script>
+	<script src="./assets/js/html5.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+	        <ul>
+	            <li><a href='#' title='Minimize' id='windowControlMinimize'></a></li>
+	            <li><a href='#' title='Maximize' id='windowControlMaximize'></a></li>
+	            <li><a href='#' title='Close'    id='windowControlClose'   ></a></li>
+	        </ul>
+	    </header>
+    	<div class="push"></div>
+	</div>
+    <footer id="clickHere">
+    	<ul>
+            <li><a href='#' title='Website' id='socialLinkWebsite'></a></li>
+            <li><a href='#' title='Twitch'  id='socialLinkTwitch' ></a></li>
+            <li><a href='#' title='Github'  id='socialLinkGithub' ></a></li>
+        </ul>
+    </footer>
+
+    <script>
+	    // Min
+		document.getElementById('windowControlMinimize').onclick = function() {
+		    app.minimize();
+		};
+
+		// Close
+		document.getElementById('windowControlClose').onclick = function() {
+		    app.close();
+		};
+
+		// Max
+		document.getElementById('windowControlMaximize').onclick = function() {
+		    if (app.isMaximized()) {
+		        app.unmaximize();
+		    } else {
+		        app.maximize();
+		    }
+		};
+
+		// Website
+		document.getElementById('socialLinkWebsite').onclick = function() {
+		    app.openExternalPage('http://pcmrbot.no-ip.info');
+		};
+
+		// Twitch
+		document.getElementById('socialLinkTwitch').onclick = function() {
+		    app.openExternalPage('http://twitch.tv/pcmrbot');
+		};
+
+		// Github
+		document.getElementById('socialLinkGithub').onclick = function() {
+		    app.openExternalPage('http://github.com/PCMRBot');
+		};
+
+		// Ctrl + Enter to open dev console
+		$(function() {
+			$(window).keypress(function(e) {
+				var key = e.which;
+				if(key == 10) {
+					app.openDevConsole();
+				}
+			});
+		});
+    </script>
+</body>
+</html>
