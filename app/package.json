@@ -13,9 +13,7 @@
 		"min_width" : 1000,
 		"min_height": 600
 	},
-	"dependencies": {
-	  "open": "~0.0.5"
-	},
+	"dependencies": {},
 	"devDependencies": {},
 	"scripts": {
 	  "test": "echo \"Error: no test specified\" && exit 1"
